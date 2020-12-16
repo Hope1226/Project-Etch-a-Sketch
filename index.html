@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project Etch-a-Sketch</title>
+        <style>
+            .container{
+                border-style: solid;
+                border-width: 1px; 
+                border-color: black;    
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-around; 
+                   
+                }
+
+        </style>
+    </head>
+    <body>
+        <main>
+        <h1>Etch-a-Sketch</h1>
+            <button id="resBtn">Reset Grid Size</button>
+            <button id="clearBtn">Clear</button>
+
+        <di class="container">
+        </di>
+        </main>
+    </body>
+    <script>
+        const container=document.querySelector('.container')
+        const resBtn=document.querySelector('#resBtn');
+        const clearBtn=document.querySelector('#clearBtn');
+
+        resBtn.addEventListener('click', increaseTheNumOfGird);
+
+        function increaseTheNumOfGird(){
+            numGird=prompt("Set the size of the Gird", 16);
+            for (i=0; i<numGird; i++){
+            const div=document.createElement('div');
+            div.classList.add('gird1');
+            div.style.cssText="height: 10px; width: 10px; background-color: blue";
+            container.appendChild(div);
+            }
+        }
+
+
+    </script>
+    
+</html>
