@@ -1,50 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <title>Project Etch-a-Sketch</title>
-        <style>
-            .container{
-                border-style: solid;
-                border-width: 1px; 
-                border-color: black;    
-                border-radius: 16px;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                justify-content: space-around; 
-                   
-                }
-
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <main>
-        <h1>Etch-a-Sketch</h1>
-            <button id="resBtn">Reset Grid Size</button>
-            <button id="clearBtn">Clear</button>
+    <div class="head"><h1>Etch a Sketch</h1> </div>
+    <div class="buttons">
+    <button id="rainbow">Rainbow</button>
+    <button id="black">Black</button>
+    <button class="clear">Clear</button>
+    </div>
+    <div id="slider">
+        <p id="pixselsSize">10x10</p>
+        <input type="range" min="6" max="100" value="16" class="sizeRange">
+    </div>
+    <div class="container">
 
-        <di class="container">
-        </di>
-        </main>
+    </div>
+
     </body>
-    <script>
-        const container=document.querySelector('.container')
-        const resBtn=document.querySelector('#resBtn');
-        const clearBtn=document.querySelector('#clearBtn');
-
-        resBtn.addEventListener('click', increaseTheNumOfGird);
-
-        function increaseTheNumOfGird(){
-            numGird=prompt("Set the size of the Gird", 16);
-            for (i=0; i<numGird; i++){
-            const div=document.createElement('div');
-            div.classList.add('gird1');
-            div.style.cssText="height: 10px; width: 10px; background-color: blue";
-            container.appendChild(div);
-            }
-        }
-
-
-    </script>
+    <script src="java.js"></script>
     
 </html>
