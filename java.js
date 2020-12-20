@@ -16,16 +16,25 @@ function createGird(numGird){
     
 }
 
-    const divs=girdBox.querySelectorAll('div');
-    divs.forEach((div)=>{
-    div.addEventListener('mouseover', ()=>{
-       div.style.backgroundColor="black";
-    })
-    
-});
 }
 
+rainbowBtn.addEventListener("click", ()=>{
+    const divs=girdBox.querySelectorAll('div');
+    divs.forEach((div)=>{
+        div.addEventListener('mouseover', ()=>{
+            div.style.backgroundColor=`hsl(${Math.random() * 360}, 100%, 50%)`;
+        })
+    })
+})
 
+blackBtn.addEventListener("click", ()=>{
+    const divs=girdBox.querySelectorAll('div');
+    divs.forEach((div)=>{
+        div.addEventListener('mouseover', ()=>{
+            div.style.backgroundColor="black";
+        })
+    })
+})
 
 clearBtn.onclick=function eraseAllcolors(){
     const girdPixels=girdBox.querySelectorAll('div');
